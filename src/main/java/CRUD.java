@@ -4,9 +4,7 @@ import java.util.List;
 
 public class CRUD {
 
-    private static String insP = "insert into person(email , pasword) values(?,?);";
-    private static String upP = "update person set email = ? where id = ?";
-    private static String delP = "delete from person where id = ?;";
+
 
     public static List<Person> getPerson(String query){
         List<Person> people = new ArrayList<>();
@@ -35,11 +33,12 @@ public class CRUD {
         List<Person> people = new ArrayList<>();
 
         try(Connection connection=DB.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(insP);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlComand.insP);
         ) {
-
-            preparedStatement.setString(1 , person.email);
-            preparedStatement.setString(2 , person.pasword);
+            int c = 1;
+            preparedStatement.setString(c , person.email);
+            c++;
+            preparedStatement.setString(c , person.pasword);
             preparedStatement.executeUpdate();
 
         } catch (SQLException e) {
@@ -50,11 +49,11 @@ public class CRUD {
 
     }
 
-    public static List<Person> updat(int id , String email){
+    public static List<Person> updatPe(int id , String email){
         List<Person> people = new ArrayList<>();
 
         try(Connection connection=DB.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(upP);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlComand.upPe);
         ) {
 
             preparedStatement.setString(1 , email);
@@ -71,7 +70,7 @@ public class CRUD {
     public static void delete(int id){
 
         try(Connection connection=DB.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement(delP);
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlComand.delP);
         ) {
 
 
@@ -83,5 +82,7 @@ public class CRUD {
         }
 
     }
+
+
 
 }
