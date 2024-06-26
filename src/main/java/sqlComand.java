@@ -3,4 +3,5 @@ public class sqlComand {
     public static String upPe = "update person set email = ? where id = ?";
     public static String delP = "delete from person where id = ?;";
     public static String insU = "insert into person(id , name , phone , gender , cyti) values(? , ? , ? , ? , ?);";
+    public static String insM = "insert into move(iditems , idperson) values(?,?);";
 }
