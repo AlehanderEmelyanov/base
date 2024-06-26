@@ -2,6 +2,14 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+/*
+* класс для подключения базы данных
+* @author AlexEm
+* @version 1.0
+*
+* */
+
+
 public class DB {
 
     private static String URL = "url базы данных";

@@ -1,3 +1,10 @@
+/*
+ * класс для работы с таблицой person
+ * и классом CRUD
+ * @author AlexEm
+ * @version 1.0
+ *
+ * */
 public class Person {
     int id=2;
     String email;

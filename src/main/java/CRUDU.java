@@ -4,7 +4,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+ * Класс CRUD... используеться для взаимодействия с таблицами БД
+ * данный класс создан для взаимодействия с таблицой persondata
+ * @author AlexEm
+ * @version 1.0
+ *
+ * */
 public class CRUDU {
 
     public static List<PersonData> getPersonU(String query){

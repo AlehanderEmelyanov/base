@@ -1,3 +1,10 @@
+/*
+ * класс для работы с таблицой move
+ * и классом CRUDmove
+ * @author AlexEm
+ * @version 1.0
+ *
+ * */
 public class Move {
 
     int id_move;

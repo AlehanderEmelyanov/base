@@ -1,3 +1,10 @@
+/*
+ * класс для работы с таблицой persondata
+ * и классом CRUDU
+ * @author AlexEm
+ * @version 1.0
+ *
+ * */
 public class PersonData {
 
     int id;
