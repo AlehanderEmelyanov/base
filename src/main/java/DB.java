@@ -4,9 +4,9 @@ import java.sql.SQLException;
 
 public class DB {
 
-    private static String URL = "jdbc:postgresql://localhost:5432/TestDB";
-    private static String USERS = "postgres";
-    private static String PASWORD = "1234";
+    private static String URL = "url базы данных";
+    private static String USERS = "имя пользователя";
+    private static String PASWORD = "пароль";
     public static Connection getConnection(){
 
 
